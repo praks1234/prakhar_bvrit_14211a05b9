@@ -80,11 +80,11 @@ public class StudentGroup implements StudentArrayOperation {
 	public void remove(int index) {
 		
 		// Add your implementation here
-		int n=students.length;
-		Student [] ab=new Student[n];
-		for(int i=0,j=0;i<n-1;)
+		int index1=students.length;
+		Student [] ab=new Student[index1];
+		for(int i=0,j=0;i<index1-1;)
 		{
-			if(i==n)
+			if(i==index1)
 				i++;
 			ab[j++]=students[i++];
 				
