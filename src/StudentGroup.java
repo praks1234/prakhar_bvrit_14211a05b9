@@ -67,9 +67,7 @@ public class StudentGroup implements StudentArrayOperation {
 		Student[] st=new Student[n+1];
 		st[n]=student;
 		for(int i=1;i<n;i++)
-			st[i]=students[i];
-		for(int i=n+1;i<n;i++)
-			
+			st[i]=students[i];	
 		students=st;
 	}
 
