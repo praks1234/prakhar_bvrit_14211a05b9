@@ -52,10 +52,10 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addFirst(Student student) {
 		
 		// Add your implementation here
-		int n=students.length;
-		Student[] st=new Student[++n];
+		int index=students.length;
+		Student[] st=new Student[++index];
 		st[0]=student;
-		for(int i=1;i<n;i++)
+		for(int i=1;i<index;i++)
 			st[i]=students[i-1];
 		students=st;
 	}
@@ -63,6 +63,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		int index=students.length;
+		Student[] st=new Student[index+1];
+		st[index]=student;
+		for(int i=1;i<index;i++)
+			st[i]=students[i];	
+		students=st;
 	}
 
 	@Override
@@ -74,12 +80,22 @@ public class StudentGroup implements StudentArrayOperation {
 	public void remove(int index) {
 		
 		// Add your implementation here
+		int index1=students.length;
+		Student [] ab=new Student[index1];
+		for(int i=0,j=0;i<index1-1;)
+		{
+			if(i==index1)
+				i++;
+			ab[j++]=students[i++];
+				
+		}
+		students=ab;
 		
 	}
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		
 	}
 
 	@Override
